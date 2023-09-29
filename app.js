@@ -48,21 +48,4 @@ function solveNQueens() {
         }
     }
 
-    function displaySolution(solution) {
-        const chessboard = document.createElement('div');
-        chessboard.className = 'chessboard';
-
-        chessboard.style.gridTemplateColumns = `repeat(${n}, 40px)`;
-        chessboard.style.gridTemplateRows = `repeat(${n}, 40px)`;
-
-        for (let row = 0; row < n; row++) {
-            for (let col = 0; col < n; col++) {
-                const cell = document.createElement('div');
-                cell.className = `cell ${col === solution[row] ? 'queen' : ''}`;
-                chessboard.appendChild(cell);
-            }
-        }
-
-        solutionContainer.appendChild(chessboard);
-    }
 }
